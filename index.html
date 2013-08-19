@@ -1,0 +1,352 @@
+<style>
+@font-face
+{
+font-family: Delicia;
+src: url('fonts/Delicious-Bold.otf');
+}
+
+@font-face
+{
+font-family: Round;
+src: url('fonts/Pacifico.ttf');
+}
+
+@font-face
+{
+font-family: Roman;
+src: url('fonts/Delicious-Roman.otf');
+}
+
+body{
+font-family: 'Delicia';
+color:#fff;
+
+background: url(img/landscape.png) no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+#footer {
+border-top: 6px solid #F57AA9;
+   position:fixed;
+   padding:20px;
+   
+   left:0px;
+   bottom:0px;
+   height:auto;
+   width:100%;
+   background:#000;
+
+}
+
+#footer-hidden {
+border-top: 6px solid #F57AA9;
+   position:fixed;
+   padding:15px;
+   
+   left:0px;
+   bottom:0px;
+   height:10px;
+   width:100%;
+   background:#000;
+
+}
+
+#close-footer{
+float:right;
+font-size:20px;
+margin-right:25px;
+cursor: pointer;
+
+
+}
+h1{
+margin-bottom:10px;
+
+}
+
+.overlay{position:absolute;top:0;left:0;width:100%;height:120%;background-color:black;z-index:1001;-moz-opacity:.8;opacity:.75;filter:alpha(opacity=80)}
+
+mo
+{
+font-size:50px;
+color: #79C9F9;
+
+}
+big{
+
+  text-shadow: 0 1px 0 #ccc,
+               0 2px 0 #c9c9c9,
+               0 3px 0 #bbb,
+               0 4px 0 #b9b9b9,
+               0 5px 0 #aaa,
+               0 6px 1px rgba(0,0,0,.1),
+               0 0 5px rgba(0,0,0,.1),
+               0 1px 3px rgba(0,0,0,.3),
+               0 3px 5px rgba(0,0,0,.2),
+               0 5px 10px rgba(0,0,0,.25),
+               0 10px 10px rgba(0,0,0,.2),
+               0 20px 20px rgba(0,0,0,.15);
+
+
+font-size:120px;
+
+
+
+}
+
+#login-trigger{
+
+
+font-size:60px;
+
+
+
+}
+::-moz-selection {
+background:#2d7e99;
+color:#fff;
+}
+
+::-webkit-selection {
+background:#2d7e99;
+color:#fff;
+}
+
+/* IE 6 */
+* html #footer {
+   position:absolute;
+   top:expression((0-(footer.offsetHeight)+(document.documentElement.clientHeight ? document.documentElement.clientHeight : document.body.clientHeight)+(ignoreMe = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop))+'px');
+}
+
+.register-button {
+    display: inline-block;
+    margin: 10px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    -webkit-box-shadow:    0 8px 0 #c5376d, 0 15px 20px rgba(0, 0, 0, .35);
+    -moz-box-shadow: 0 8px 0 #c5376d, 0 15px 20px rgba(0, 0, 0, .35);
+    box-shadow: 0 8px 0 #c5376d, 0 15px 20px rgba(0, 0, 0, .35);
+    -webkit-transition: -webkit-box-shadow .1s ease-in-out;
+    -moz-transition: -moz-box-shadow .1s ease-in-out;
+    -o-transition: -o-box-shadow .1s ease-in-out;
+    transition: box-shadow .1s ease-in-out;
+    font-size: 50px;
+    color: #fff;
+	margin-top:20px;
+}
+
+.register-button span {
+    display: inline-block;
+    padding: 20px 30px;
+    background-color: #ec528d;
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(hsla(338, 90%, 80%, .8)), to(hsla(338, 90%, 70%, .2)));
+    background-image: -webkit-linear-gradient(hsla(338, 90%, 80%, .8), hsla(338, 90%, 70%, .2));
+    background-image: -moz-linear-gradient(hsla(338, 90%, 80%, .8), hsla(338, 90%, 70%, .2));
+    background-image: -o-linear-gradient(hsla(338, 90%, 80%, .8), hsla(338, 90%, 70%, .2));
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    -webkit-box-shadow: inset 0 -1px 1px rgba(255, 255, 255, .15);
+    -moz-box-shadow: inset 0 -1px 1px rgba(255, 255, 255, .15);
+    box-shadow: inset 0 -1px 1px rgba(255, 255, 255, .15);
+    font-family: 'Delicia', Arial, sans-serif;
+	font-size: 90px;
+	padding:50px;
+    line-height: 1;
+    text-shadow: 0 -1px 1px rgba(175, 49, 95, .7);
+    -webkit-transition: background-color .2s ease-in-out, -webkit-transform .1s ease-in-out;
+    -moz-transition: background-color .2s ease-in-out, -moz-transform .1s ease-in-out;
+    -o-transition: background-color .2s ease-in-out, -o-transform .1s ease-in-out;
+    transition: background-color .2s ease-in-out, transform .1s ease-in-out;
+}
+
+.register-button:hover span {
+    background-color: #ec6a9c;
+    text-shadow: 0 -1px 1px rgba(175, 49, 95, .9), 0 0 5px rgba(255, 255, 255, .8);
+}
+
+.register-button:active, .button:focus {
+    -webkit-box-shadow:    0 8px 0 #c5376d, 0 12px 10px rgba(0, 0, 0, .3);
+    -moz-box-shadow: 0 8px 0 #c5376d, 0 12px 10px rgba(0, 0, 0, .3);
+    box-shadow:    0 8px 0 #c5376d, 0 12px 10px rgba(0, 0, 0, .3);
+}
+
+.register-button:active span {
+    -webkit-transform: translate(0, 4px);
+    -moz-transform: translate(0, 4px);
+    -o-transform: translate(0, 4px);
+    transform: translate(0, 4px);
+}
+
+#show-footer{
+cursor:pointer;
+}
+
+a{
+text-decoration:none;
+color:#fff;
+}
+
+input{
+font-family:'Roman';
+}
+
+
+
+
+    .login-btn {
+        
+     background-color:#4b3f39;
+
+    font-size:12px;
+    text-decoration:none;
+    color:#fff;
+	font-family:'Roman';
+    position:relative;
+    padding:10px 20px;
+    padding-right:50px;
+    background-image: linear-gradient(bottom, rgb(62,51,46) 0%, rgb(101,86,78) 100%);
+    border-radius: 5px;
+    box-shadow: inset 0px 1px 0px #9e8d84, 0px 5px 0px 0px #322620, 0px 10px 5px #999;
+        
+    }
+  
+    .login-btn:active {
+       top:3px;
+    background-image: linear-gradient(bottom, rgb(62,51,46) 100%, rgb(101,86,78) 0%);
+    box-shadow: inset 0px 1px 0px #9e8d84, 0px 2px 0px 0px #322620, 0px 5px 3px #999;
+    }
+	
+	.login-btn::before{
+	
+	background-color:#322620;
+    background-image:url(img/right_arrow.png);
+    background-repeat:no-repeat;
+    background-position:center center;
+    content:"";
+    width:20px;
+    height:20px;
+    position:absolute;
+    right:15px;
+    top:50%;
+    margin-top:-9px;
+    border-radius: 50%;
+    box-shadow: inset 0px 1px 0px #19120f, 0px 1px 0px #827066;
+	
+	}
+	
+	.login-btn:active::before{
+	
+	  top:50%;
+    margin-top:-12px;
+    box-shadow: inset 0px 1px 0px #827066, 0px 3px 0px #19120f, 0px 6px 3px #382e29;
+	
+	
+	}
+	
+
+
+</style>
+<body>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+$('#close-footer').click(function(){
+
+ 
+    $('#footer').slideToggle(100, function(){
+	
+	$('#footer-hidden').slideToggle(100);
+	
+	
+	
+	});
+	
+ 
+
+});
+
+$('#footer-hidden').click(function(){
+
+ 
+    $('#footer-hidden').slideToggle(100, function(){
+	
+	$('#footer').slideToggle(100);
+	
+	
+	
+	});
+	
+ 
+
+});
+
+$('#login-trigger').click(function(){
+
+ 
+    $('#login').slideToggle(200);
+	
+ 
+
+});
+});
+
+</script>
+<div  style="margin-left:20px;">
+<div style="float:right;">r0.1</div><big>Lifetastic</big>
+
+<div style="float:right; margin-right:8%; margin-top:3.5%; cursor:pointer;">
+<span id="login-trigger">Login <span style="
+
+
+	border-left: 18px solid transparent;
+	border-right: 18px solid transparent;
+	margin-bottom:5px;
+	border-top: 18px solid #fff; display:inline-block;"></span></span>
+	
+	
+	<div id="login" style="display:none; background:#fff; POSITION:absolute; margin-top:20px; padding:20px; width: 15%; align-center; border-radius:4px; color:#000;">Log into Lifetastic &reg;<br>
+	<input type="text" style="width:90%; outline:0; margin-top:10px; padding-bottom:2px; border:none; border-bottom:2px solid #F57AA9;" placeholder="Username...">
+	<input type="password" style="width:90%; outline:0; margin-top:10px; padding-bottom:2px; border:none; border-bottom:2px solid #F57AA9;" placeholder="Password..."><br>
+	<br><br>
+	<a class="login-btn">Enter your world</a><br><br>
+	</div>
+	
+	
+	
+	
+	
+	
+	</div>
+
+
+
+<br>
+...because life is fantastic.
+</div>
+<center style="margin-top:40px;"><span style="font-size:30px;">Haven't registered yet?</span><br><a href="#" class="register-button">
+    <span>Join now</span>
+</a>
+<div style=" background:#fff;  margin-top:20px; padding:20px; width: 29.5%; align-center; border-radius:4px; color:#000;">
+
+
+...or did you forget your password?
+	
+	
+	
+	</div></center>
+<div id="footer"><div id="close-footer">&times;&nbsp;</div>
+<div style="float:left;">
+<h1>Welcome to your Life!</h1> A world for you to discover. Your new life.</div>
+<div style=" margin-left:400px; margin-top:40px; font-size:20px; margin-right:10%;">
+Copyright © 2013 - 2014 Lifetastic Labs. All Rights Reserved. Made with <span style="color:red;"><3</span> in Spain.
+</div>
+</div>
+<div id="footer-hidden" style="display:none;">
+OPEN THE AWESOME FOOTER<div id="show-footer" style="float:right; margin-right:4%; font-size:20px; padding-bottom:50px;">^</div>
+</div>
+
+</body>
