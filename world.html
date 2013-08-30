@@ -572,6 +572,14 @@ border:4px solid white;
 
 	}
 
+#inventory-count{
+background-color: #A9014B;
+color:#fff;
+padding:10px;
+float:right;
+font-size:18px;
+border-radius:4px;
+}
 
 </style>
 
@@ -747,6 +755,7 @@ $.each(inventory, function(i, item) {
 	$('#inventory-content').append('<div><img style="width:50px; height:60px;" src="'+ inventory[i].img +'"><br>'+ inventory[i].name +'</div>');
 });
 
+$('#inventory-count').html('<small>' + inventory.length + ' item(s) purchased</small>');
 
 $( ".drag" ).draggable({containment:'parent'});
 
@@ -829,7 +838,7 @@ Total funds: 140,000$
 		
 		<div class="inventory drag">
 		
-		<h2 style="color:#A9014B">My Items</h2>
+		<h2 style="color:#A9014B"><div id="inventory-count"></div> My Items</h2>
 		<hr>
 		<div id="inventory-content"></div>
 		
