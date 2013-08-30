@@ -579,22 +579,98 @@ $('.alert').reveal({
 
 }
 
+var sections = [
+	{
+	    name:  "Walls & windows",
+		id: "1"
+	},
+	{
+	    name:  "Halloween",
+		id: "2"
+	},
+	{
+	    name:  "Easter",
+		id:   "3"
+	},
+	{
+	    name:  "Christmas",
+		id: "4"
+	},
+	{
+	    name:  "Valentines",
+		id: "5"
+	},
+	{
+	    name:  "Summer",
+		id: "6"
+	},
+	{
+	    name:  "VIP Items",
+		id: "7"
+	}
+];
 
+$.each(sections, function(i, item) {
+	$('#sections').append('<div class="section" style="display:inline-block;" id="s-' + sections[i].id +'">' + sections[i].name +'</div><div class="inner-section"  style="display:none;" id="i-' + sections[i].id +'"></div>');
+	
+	$('#s-' + sections[i].id + '').click(function(){
+    $('#i-' + sections[i].id + '').slideToggle(1000);
 
+    });
 
-
-$('#s-1').click(function(){
-$('#i-1').slideToggle(1000);
-$('#i-2').slideUp(1000);
 
 });
 
-$('#s-2').click(function(){
 
-$('#i-2').slideToggle(1000);
-$('#i-1').slideUp(1000);
+var items = [
+	{
+	    name:  "sofa",
+		price: "$100",
+		img:   "http://www.pixeljoint.com/files/icons/morpheuschair.gif",
+		section: 1
+	},
+	{
+	    name:  "sofa",
+		price: "$100",
+		img:   "http://www.pixeljoint.com/files/icons/morpheuschair.gif",
+		section: 2
+	},
+	{
+	    name:  "sofa",
+		price: "$100",
+		img:   "http://www.pixeljoint.com/files/icons/morpheuschair.gif",
+		section: 3
+	},
+	{
+	    name:  "sofa",
+		price: "$100",
+		img:   "http://www.pixeljoint.com/files/icons/morpheuschair.gif",
+		section: 4
+	},
+	{
+	    name:  "sofa",
+		price: "$100",
+		img:   "http://www.pixeljoint.com/files/icons/morpheuschair.gif",
+		section: 5
+	},
+	{
+	    name:  "sofa",
+		price: "$100",
+		img:   "http://www.pixeljoint.com/files/icons/morpheuschair.gif",
+		section: 6
+	},
+	{
+	    name:  "sofa",
+		price: "$100",
+		img:   "http://www.pixeljoint.com/files/icons/morpheuschair.gif",
+		section: 7
+	}
+];
 
+$.each(items, function(i, item) {
+	$('#i-' + items[i].section + '').append('<div><img src="'+ items[i].img +'"><br>'+ items[i].price +'</div>');
 });
+
 
 $( ".drag" ).draggable({containment:'parent'});
 
@@ -731,45 +807,7 @@ Total funds: 140,000$
 Welcome to the catalogue! Buy items for your house, and style it the way you want, with our diverse selection of furniture.
 <hr>
 
-<div class="section" style="display:inline-block;" id="s-1">Walls, windows & floor</div>
-
-<div class="inner-section"  id="i-1">
-
-<div><img src="http://www.pixeljoint.com/files/icons/morpheuschair.gif"><br>
-$500</div>
-<div><img src="http://www.pixeljoint.com/files/icons/morpheuschair.gif"><br>
-$500 + <span style="color:red;">§10</span></div>
-<div><img src="http://www.pixeljoint.com/files/icons/morpheuschair.gif"><br>
-$500</div>
-<div><img src="http://www.pixeljoint.com/files/icons/morpheuschair.gif"><br>
-$500</div>
-<div><img src="http://www.pixeljoint.com/files/icons/morpheuschair.gif"><br>
-$500 + <span style="color:red;">§10</span></div>
-<div><img src="http://www.pixeljoint.com/files/icons/morpheuschair.gif"><br>
-$500</div>
-
-</div>
-
-
-
-<div class="section" id="s-2" style="display:inline-block;">Furniture</div>
-<div class="inner-section" id="i-2">
-
-<div><img src="http://www.pixeljoint.com/files/icons/morpheuschair.gif"><br>
-$500</div>
-<div><img src="http://www.pixeljoint.com/files/icons/morpheuschair.gif"><br>
-$500</div>
-<div><img src="http://www.pixeljoint.com/files/icons/morpheuschair.gif"><br>
-$500</div>
-<div><img src="http://www.pixeljoint.com/files/icons/morpheuschair.gif"><br>
-$500</div>
-<div><img src="http://www.pixeljoint.com/files/icons/morpheuschair.gif"><br>
-$500</div>
-<div><img src="http://www.pixeljoint.com/files/icons/morpheuschair.gif"><br>
-$500 + <span style="color:red;">§10</span></div>
-
-</div>
-
+<div id="sections"></div>
 
 </div>
 
