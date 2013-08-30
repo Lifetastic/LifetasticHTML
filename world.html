@@ -537,13 +537,40 @@ height:auto;
 background:#fff;
 border-radius:4px;
 border:4px solid white;
+}
 
+.inventory{
 
-
-
-
+padding-left:20px;
+padding-top:10px;
+padding-right:20px;
+padding-bottom:10px;
+width:480px;
+height:auto;
+background:#fff;
+border-radius:4px;
+border:4px solid white;
 
 }
+
+#inventory-content div{
+
+    background-color: #fff;
+
+    display:inline-block;
+    margin: 5px;
+	text-align:center;
+	border-radius:4px;
+	padding:10px;
+
+}
+
+#inventory-content div:hover {
+
+    background-color: #A9014B;
+	color:#fff;
+
+	}
 
 
 </style>
@@ -671,6 +698,56 @@ $.each(items, function(i, item) {
 });
 
 
+var inventory = [
+	{
+	    name:  "hc_throne",
+		img:   "http://www.pixeljoint.com/files/icons/morpheuschair.gif",
+		stack: 20,
+		id: "1"
+	},
+	{
+	    name:  "plasto_chair_*1",
+		img:   "http://www.pixeljoint.com/files/icons/morpheuschair.gif",
+		stack: 20,
+		id: "2"
+	},
+	{
+	    name:  "plasto_chair_*2",
+		img:   "http://www.pixeljoint.com/files/icons/morpheuschair.gif",
+		stack: 20,
+		id:   "3"
+	},
+	{
+	    name:  "plasto_chair_*3",
+		img:   "http://www.pixeljoint.com/files/icons/morpheuschair.gif",
+		stack: 20,
+		id: "4"
+	},
+	{
+	    name:  "dragon_*1",
+		img:   "http://www.pixeljoint.com/files/icons/morpheuschair.gif",
+		stack: 20,
+		id: "5"
+	},
+	{
+	    name:  "dragon_*2",
+		img:   "http://www.pixeljoint.com/files/icons/morpheuschair.gif",
+		stack: 20,
+		id: "6"
+	},
+	{
+	    name:  "dragon_*3",
+		img:   "http://www.pixeljoint.com/files/icons/morpheuschair.gif",
+		stack: 20,
+		id: "7"
+	}
+];
+
+$.each(inventory, function(i, item) {
+	$('#inventory-content').append('<div><img style="width:50px; height:60px;" src="'+ inventory[i].img +'"><br>'+ inventory[i].name +'</div>');
+});
+
+
 $( ".drag" ).draggable({containment:'parent'});
 
 setTimeout(function(){
@@ -750,7 +827,13 @@ Total funds: 140,000$
 <a class="btn magenta" style="margin-top:5px;">Send message!</a></div>
 		
 		
+		<div class="inventory drag">
 		
+		<h2 style="color:#A9014B">My Items</h2>
+		<hr>
+		<div id="inventory-content"></div>
+		
+		</div>
 		
 <div class="navigator drag">
 
